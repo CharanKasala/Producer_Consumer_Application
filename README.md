@@ -7,7 +7,7 @@ This project demonstrates a producer-consumer application in C using interproces
 
 - [Overview](#overview)
 - [Features](#features)
-- [System Architecture](#System Architecture)
+- [System Architecture](#systemarchitecture)
 - [Instructions to execute](#instructions-to-execute)
 - [File Descriptions](#file-descriptions)
 
