@@ -7,12 +7,8 @@ This project demonstrates a producer-consumer application in C using interproces
 
 - [Overview](#overview)
 - [Features](#features)
-- [System Requirements](#system-requirements)
-- [Setup](#setup)
-- [How to Run](#how-to-run)
+- [Instructions to execute](#instructions-to-execute)
 - [File Descriptions](#file-descriptions)
-- [Testing](#testing)
-- [Acknowledgments](#acknowledgments)
 
 ---
 
@@ -43,20 +39,26 @@ The system follows the ASCII standard with odd parity and uses temporary files f
    cd <repository-folder>
    
 2. Make sure that all the below mentioned filesare in the same folder (or) directory.
-      1) encDec.h
-      2) generatePrefix.c
-      3) convertToUpper.c
-      4) encodeService.c
-      5) decodeService.c
-      6) ProducerConsumer.c
-      7) Samplefile.inpf
+   
+         1) encDec.h
+         2) generatePrefix.c
+         3) convertToUpper.c
+         4) encodeService.c
+         5) decodeService.c
+         6) ProducerConsumer.c
+         7) Samplefile.inpf
 
-3. Create necessary executable files using the following commands :
+4. Create necessary executable files using the following commands :
+   
       gcc generatePrefix.c -o generatePrefix
+
       gcc convertToUpper.c -o convertToUpper
+
       gcc encodeService.c -o encodeService
+
       gcc decodeService.c -o decodeService
+
       gcc ProducerConsumer.c -o ProducerConsumer
    
-4. Run the program:
+6. Run the program:
       ./ProducerConsumer samplefile.inpf
