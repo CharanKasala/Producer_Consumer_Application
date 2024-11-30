@@ -8,6 +8,7 @@ This project demonstrates a producer-consumer application in C using interproces
 - [Overview](#overview)
 - [Features](#features)
 - [System Architecture](#system-architecture)
+- [Producer and Consumer Functions](#producer-and-consumer-functions)
 - [Instructions to execute](#instructions-to-execute)
 - [File Descriptions](#file-descriptions)
 
@@ -45,6 +46,7 @@ The application follows a layered architecture, with each layer handling specifi
 - Reads input data files (`samplefile.inpf`) in the producer.
 - Writes processed data to output files (`samplefile.outf` and `samplefile.done`) in the consumer.
 
+## System Architecture
 ### Producer
 
 1. **Read Input Data**:
