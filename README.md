@@ -62,3 +62,16 @@ The system follows the ASCII standard with odd parity and uses temporary files f
 5. Run the program:
    
          ./ProducerConsumer samplefile.inpf
+
+6. After execution, the following files will be generated:
+
+         **samplefile.binf**: Encoded data with parity and frames.
+   
+         **samplefile.outf**: Converted uppercase data.
+   
+         **samplefile.chck**: Re-encoded data from the consumer.
+   
+         **samplefile.done**: Final decoded output.
+
+
+## File Descriptions
