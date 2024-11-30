@@ -34,19 +34,29 @@ The system follows the ASCII standard with odd parity and uses temporary files f
 - Modular and layered design.
 - Uses pipes for interprocess communication.
 
----
 
-## System Requirements
-
-- **Operating System**: Linux distribution
-- **Compiler**: GCC
-- **Programming Language**: C
-
----
-
-## Setup
+## Instructions to execute:
 
 1. Clone this repository:
    ```bash
    git clone <repository-url>
    cd <repository-folder>
+   
+2. Make sure that all the below mentioned filesare in the same folder (or) directory.
+      1) encDec.h
+      2) generatePrefix.c
+      3) convertToUpper.c
+      4) encodeService.c
+      5) decodeService.c
+      6) ProducerConsumer.c
+      7) Samplefile.inpf
+
+3. Create necessary executable files using the following commands :
+      gcc generatePrefix.c -o generatePrefix
+      gcc convertToUpper.c -o convertToUpper
+      gcc encodeService.c -o encodeService
+      gcc decodeService.c -o decodeService
+      gcc ProducerConsumer.c -o ProducerConsumer
+   
+4. Run the program:
+      ./ProducerConsumer samplefile.inpf
