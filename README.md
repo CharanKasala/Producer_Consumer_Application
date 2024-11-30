@@ -6,7 +6,7 @@ This project demonstrates a producer-consumer application in C using interproces
 ## Table of Contents
 
 - [Overview](#overview)
-- [Features](#features)
+- [Key Features](#key-features)
 - [System Architecture](#system-architecture)
 - [Producer and Consumer Functions](#producer-and-consumer-functions)
 - [Instructions to execute](#instructions-to-execute)
