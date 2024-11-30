@@ -65,28 +65,28 @@ The system follows the ASCII standard with odd parity and uses temporary files f
 
 6. After execution, the following files will be generated:
 
-         samplefile.binf: Encoded data with parity and frames.
+         **`samplefile.binf:`** Encoded data with parity and frames.
    
-         samplefile.outf: Converted uppercase data.
+         **`samplefile.outf:`** Converted uppercase data.
    
-         samplefile.chck: Re-encoded data from the consumer.
+         **`samplefile.chck:`** Re-encoded data from the consumer.
    
-         samplefile.done: Final decoded output.
+         **`samplefile.done:`** Final decoded output.
 
 ## File Descriptions:
 
 - **Input File**:
-- 
+
   - **`samplefile.inpf`**: Contains the original ASCII data to process.
    
 - **Temporary Files**:
-- 
+ 
   - **`samplefile.binf`**: Encoded binary data with parity.
-  - 
+     
   - **`samplefile.outf`**: Data with lowercase converted to uppercase.
-  - 
+    
   - **`samplefile.chck`**: Re-encoded output from the consumer.
 
 - **Output File**:
-- 
+ 
   - **`samplefile.done`**: Final decoded and verified data.
