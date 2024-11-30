@@ -18,6 +18,7 @@ This project demonstrates a producer-consumer application in C using interproces
 This application implements a producer-consumer model where:
 1. The **Producer** encodes input data, adds a parity bit, frames the data, and sends it through a pipe to the **Consumer**.
 2. The **Consumer** decodes, converts lowercase to uppercase, re-encodes, and sends the result back to the **Producer**.
+3.  The **Producer** decodes the received data and writes it to the output file.
 
 The system follows the ASCII standard with odd parity and uses temporary files for debugging and results.
 
