@@ -73,14 +73,20 @@ The system follows the ASCII standard with odd parity and uses temporary files f
    
          samplefile.done: Final decoded output.
 
+## File Descriptions:
 
 - **Input File**:
+- 
   - **`samplefile.inpf`**: Contains the original ASCII data to process.
-
+   
 - **Temporary Files**:
+- 
   - **`samplefile.binf`**: Encoded binary data with parity.
+  - 
   - **`samplefile.outf`**: Data with lowercase converted to uppercase.
+  - 
   - **`samplefile.chck`**: Re-encoded output from the consumer.
 
 - **Output File**:
+- 
   - **`samplefile.done`**: Final decoded and verified data.
