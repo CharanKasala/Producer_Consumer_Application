@@ -47,7 +47,60 @@ The application follows a layered architecture, with each layer handling specifi
 - Reads input data files (`samplefile.inpf`) in the producer.
 - Writes processed data to output files (`samplefile.outf` and `samplefile.done`) in the consumer.
 
+---
 
+## Producer Functions
+
+1. **Read Input Data**:
+   - Reads ASCII characters from input files with the `.inpf` extension.
+
+2. **Encode Data**:
+   - Converts each ASCII character into a 7-bit binary string.
+   - Adds a parity bit (odd parity) to each character to ensure data integrity.
+
+3. **Frame Data**:
+   - Groups the encoded data into frames:
+     - 2 `SYN` characters (`ASCII 22`).
+     - 1 control character for length indication.
+     - Up to 32 data characters per frame (padded if necessary).
+
+4. **Transmit Frames**:
+   - Writes the encoded frames to a pipe to be transmitted to the Consumer.
+
+5. **Receive Processed Data**:
+   - Reads processed frames from a second pipe shared with the Consumer.
+   - Deframes the data, removes parity bits, and decodes it back into ASCII.
+
+6. **Write Final Output**:
+   - Writes the final decoded data to an output file (`.done`).
+
+---
+
+## Consumer Functions
+
+1. **Receive Frames**:
+   - Reads encoded frames sent by the Producer through the pipe.
+
+2. **Deframe Data**:
+   - Removes control characters (SYN, length) to retrieve the actual data.
+
+3. **Check and Remove Parity**:
+   - Verifies and removes the parity bit for each character.
+
+4. **Decode Data**:
+   - Converts binary data back into ASCII characters.
+
+5. **Convert to Uppercase**:
+   - Converts all lowercase letters in the data to uppercase.
+
+6. **Re-encode Data**:
+   - Re-encodes the modified data (with uppercase characters) into binary.
+   - Adds a parity bit and frames the data.
+
+7. **Transmit Processed Data**:
+   - Sends the re-encoded frames back to the Producer via another pipe.
+
+---
 ## Instructions to execute:
 
 1. Clone this repository:
