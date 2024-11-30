@@ -34,7 +34,7 @@ The system follows the ASCII standard with odd parity and uses temporary files f
 
 1. Clone this repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/CharanKasala/Producer_Consumer_Application.git
    cd <repository-folder>
    
 2. Make sure that all the below mentioned filesare in the same folder (or) directory.
