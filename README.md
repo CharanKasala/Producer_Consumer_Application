@@ -49,16 +49,16 @@ The system follows the ASCII standard with odd parity and uses temporary files f
          7) Samplefile.inpf
 
 4. Create necessary executable files using the following commands :
-   
-      gcc generatePrefix.c -o generatePrefix
 
-      gcc convertToUpper.c -o convertToUpper
+         gcc generatePrefix.c -o generatePrefix
 
-      gcc encodeService.c -o encodeService
+         gcc convertToUpper.c -o convertToUpper
 
-      gcc decodeService.c -o decodeService
+         gcc encodeService.c -o encodeService
 
-      gcc ProducerConsumer.c -o ProducerConsumer
+         gcc decodeService.c -o decodeService
+
+         gcc ProducerConsumer.c -o ProducerConsumer
    
 6. Run the program:
       ./ProducerConsumer samplefile.inpf
