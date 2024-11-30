@@ -7,6 +7,7 @@ This project demonstrates a producer-consumer application in C using interproces
 
 - [Overview](#overview)
 - [Features](#features)
+- [System Architecture](#System Architecture)
 - [Instructions to execute](#instructions-to-execute)
 - [File Descriptions](#file-descriptions)
 
@@ -29,6 +30,22 @@ The system follows the ASCII standard with odd parity and uses temporary files f
 - Modular and layered design. It has distinct physical, data link, and application layers
 - Uses pipes for interprocess communication.
 
+## System Architecture
+
+The application follows a layered architecture, with each layer handling specific responsibilities:
+
+### Physical Layer
+- Converts characters to binary bit patterns and vice versa.
+- Manages parity bit addition, verification, and removal.
+
+### Data Link Layer
+- Frames data by adding control characters (`SYN`, `LENGTH`, etc.).
+- Deframes received data to extract meaningful content.
+
+### Application Layer
+- Reads input data files (`samplefile.inpf`) in the producer.
+- Writes processed data to output files (`samplefile.outf` and `samplefile.done`) in the consumer.
+
 
 ## Instructions to execute:
 
@@ -47,7 +64,7 @@ The system follows the ASCII standard with odd parity and uses temporary files f
          6) ProducerConsumer.c
          7) Samplefile.inpf
 
-4. Create necessary executable files using the following commands :
+3. Create necessary executable files using the following commands :
 
          gcc generatePrefix.c -o generatePrefix
 
@@ -59,19 +76,21 @@ The system follows the ASCII standard with odd parity and uses temporary files f
 
          gcc ProducerConsumer.c -o ProducerConsumer
    
-5. Run the program:
+4. Run the program:
    
          ./ProducerConsumer samplefile.inpf
 
-6. After execution, the following files will be generated:
+5. After execution, the following files will be generated:
 
-         **`samplefile.binf:`** Encoded data with parity and frames.
+         samplefile.binf
    
-         **`samplefile.outf:`** Converted uppercase data.
+         samplefile.outf
    
-         **`samplefile.chck:`** Re-encoded data from the consumer.
+         samplefile.chck
    
-         **`samplefile.done:`** Final decoded output.
+         samplefile.done
+
+   samplefile.done contains the Upper
 
 ## File Descriptions:
 
