@@ -35,7 +35,7 @@ The system follows the ASCII standard with odd parity and uses temporary files f
 The application follows a layered architecture, with each layer handling specific responsibilities:
 
 ### Physical Layer
-- Converts characters to binary bit patterns and vice versa.
+- Converts characters to binary bit patterns and binary patterns into characters.
 - Manages parity bit addition, verification, and removal.
 
 ### Data Link Layer
@@ -43,8 +43,8 @@ The application follows a layered architecture, with each layer handling specifi
 - Deframes received data to extract meaningful content.
 
 ### Application Layer
-- Reads input data files (`samplefile.inpf`) in the producer.
-- Writes processed data to output files (`samplefile.outf` and `samplefile.done`) in the consumer.
+- Reads data to be transmitted from input data files in the producer,
+- Writes processed data into display (or output data file) in the consumer.
 
 ## Producer and Consumer Functions:
 ### Producer:
