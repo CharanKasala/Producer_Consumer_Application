@@ -22,12 +22,11 @@ The system follows the ASCII standard with odd parity and uses temporary files f
 
 ---
 
-## Features
+## Key Features
 
 - Encodes and decodes data with parity bit and framing.
 - Converts lowercase letters to uppercase.
-- Simulates transmission errors.
-- Modular and layered design.
+- Modular and layered design. It has distinct physical, data link, and application layers
 - Uses pipes for interprocess communication.
 
 
@@ -60,5 +59,6 @@ The system follows the ASCII standard with odd parity and uses temporary files f
 
          gcc ProducerConsumer.c -o ProducerConsumer
    
-6. Run the program:
-      ./ProducerConsumer samplefile.inpf
+5. Run the program:
+   
+         ./ProducerConsumer samplefile.inpf
