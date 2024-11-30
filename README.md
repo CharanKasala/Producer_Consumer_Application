@@ -11,7 +11,6 @@ This project demonstrates a producer-consumer application in C using interproces
 - [Instructions to execute](#instructions-to-execute)
 - [File Descriptions](#file-descriptions)
 
----
 
 ## Overview
 
@@ -22,7 +21,6 @@ This application implements a producer-consumer model where:
 
 The system follows the ASCII standard with odd parity and uses temporary files for debugging and results.
 
----
 
 ## Key Features
 
@@ -47,9 +45,7 @@ The application follows a layered architecture, with each layer handling specifi
 - Reads input data files (`samplefile.inpf`) in the producer.
 - Writes processed data to output files (`samplefile.outf` and `samplefile.done`) in the consumer.
 
----
-
-## Producer Functions
+### Producer
 
 1. **Read Input Data**:
    - Reads ASCII characters from input files with the `.inpf` extension.
@@ -74,9 +70,7 @@ The application follows a layered architecture, with each layer handling specifi
 6. **Write Final Output**:
    - Writes the final decoded data to an output file (`.done`).
 
----
-
-## Consumer Functions
+### Consumer
 
 1. **Receive Frames**:
    - Reads encoded frames sent by the Producer through the pipe.
@@ -100,7 +94,6 @@ The application follows a layered architecture, with each layer handling specifi
 7. **Transmit Processed Data**:
    - Sends the re-encoded frames back to the Producer via another pipe.
 
----
 ## Instructions to execute:
 
 1. Clone this repository:
